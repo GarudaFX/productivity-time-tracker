@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap'); 
+
+@font-face {
+    font-family: DS-Digital ;
+    src: url(DS-DIGIB.TTF);
+}
+
+// Custom Properties
+$primary: rgb(90, 90, 90);
+$secondary:  rgb(223, 221, 221);
+$background: rgb(240, 240, 240);
+
+// Dark theme
+
+
+* {
+    margin: 0;
+    color: $primary;
+}
+
+body {
+    background-color: $background;
+
+    .title {
+        font-family: 'Poppins',sans-serif;
+        font-size:70px;
+        text-align: center;
+        margin-top:50px;
+    }
+
+    .container {
+        min-width: 90vw;
+    }
+    
+    .body-clock {
+        height:50vh;
+        width:80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin:1% 0 0 10%;
+        background-color: $secondary;
+        border-radius:20px;
+
+        h1 {
+            font-family: 'DS-Digital';
+            font-size:290px;
+        }
+
+        span {
+            font-family: 'DS-Digital';
+            font-size:170px;
+        }
+    }
+
+    .indicators {
+        margin-block: 20px;
+        display: flex;
+        justify-content: space-evenly;
+
+        > * {
+            font-family: 'Poppins',sans-serif;
+            font-size: 20px;
+        }
+    }
+}
