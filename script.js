@@ -1,37 +1,30 @@
-const secondsDisplay = document.getElementById('seconds');
-const minutesDisplay = document.getElementById('minutes');
-const hoursDisplay = document.getElementById('hours');
+const secondsView = document.getElementById("seconds");
+const minutesView = document.getElementById("minutes");
+const hoursView = document.getElementById("hours");
 
-var time,seconds = 1,maxTime = 60,ms = 1000;
+let seconds = 1, minutes = 0, hours = 0;
+const maxTime = 60, ms = 1000
 
-//Main function for seconds counter
-function timer() {
-    setInterval(function() {
-        secondsDisplay.innerText = seconds;
-        seconds++; //This will increment variable second after 1000 milliseconds count;
-        if(seconds > maxTime) { //Since the maximum seconds interval is 60 seconds, if it exceeds 60 seconds
-            //It will reset the counter
-            clearInterval(timer);
-        }
-    }, ms); //This will stand out as the delay before incrementing seconds counter
+const timer = () => {
+    hoursView.innerText = hours
+    minutesView.innerText = minutes
+    secondsView.innerText = seconds
+    setTimeout(() => {
+        seconds++
+        if(seconds < maxTime) {
+            timer()
+        } else {
+            minutes += 1
+            seconds = 1;
+            timer()
+        } 
+    }, ms)
+
+    if(minutes > maxTime) {
+        hours += 1
+        minutes = 1
+        timer()
+    } 
 }
 
-function minutesTimer(seconds) {
-    var minutes = 1;
-    if(seconds > maxTime) {
-        minutes++;
-        minutesDisplay.innerText = minutes;
-        if(minutes >= maxTime) {
-            hoursTimer(seconds,minutes);
-            minutes = 0;
-        }
-    }
-}
-
-function hoursTimer(seconds,minutes) {
-    var hours = 1;
-    if(seconds > maxTime && minutes > maxTime) {
-        hours++
-        hoursDisplay.innerText = hours;
-    }
-}
+timer()
