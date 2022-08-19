@@ -5,11 +5,11 @@
 }
 * {
   margin: 0;
-  color: rgb(90, 90, 90);
+  color: rgb(255, 254, 254);
 }
 
 body {
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(30, 30, 30);
 }
 body .title {
   font-family: "Poppins", sans-serif;
@@ -27,12 +27,108 @@ body .body-clock {
   align-items: center;
   justify-content: center;
   margin: 1% 0 0 10%;
-  background-color: rgb(223, 221, 221);
+  background-color: rgb(33, 33, 33);
   border-radius: 20px;
 }
 body .body-clock h1 {
   font-family: "DS-Digital";
   font-size: 290px;
+  -webkit-animation: colorChange 20s infinite;
+          animation: colorChange 20s infinite;
+}
+@-webkit-keyframes colorChange {
+  0% {
+    color: #3300FF;
+  }
+  6% {
+    color: #0057FF;
+  }
+  12% {
+    color: #FF00F5;
+  }
+  18% {
+    color: #FF00F5;
+  }
+  24% {
+    color: #FF00F5;
+  }
+  32% {
+    color: #FF008A;
+  }
+  36% {
+    color: #e252e0;
+  }
+  42% {
+    color: #fdea96;
+  }
+  48% {
+    color: #3551a4;
+  }
+  54% {
+    color: #2c8ec4;
+  }
+  60% {
+    color: #31cdb0;
+  }
+  66% {
+    color: #f8c7d5;
+  }
+  72% {
+    color: #9995ef;
+  }
+  78% {
+    color: #ffab96;
+  }
+  86% {
+    color: #ff0f47;
+  }
+}
+@keyframes colorChange {
+  0% {
+    color: #3300FF;
+  }
+  6% {
+    color: #0057FF;
+  }
+  12% {
+    color: #FF00F5;
+  }
+  18% {
+    color: #FF00F5;
+  }
+  24% {
+    color: #FF00F5;
+  }
+  32% {
+    color: #FF008A;
+  }
+  36% {
+    color: #e252e0;
+  }
+  42% {
+    color: #fdea96;
+  }
+  48% {
+    color: #3551a4;
+  }
+  54% {
+    color: #2c8ec4;
+  }
+  60% {
+    color: #31cdb0;
+  }
+  66% {
+    color: #f8c7d5;
+  }
+  72% {
+    color: #9995ef;
+  }
+  78% {
+    color: #ffab96;
+  }
+  86% {
+    color: #ff0f47;
+  }
 }
 body .body-clock span {
   font-family: "DS-Digital";
