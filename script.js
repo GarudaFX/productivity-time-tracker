@@ -2,7 +2,7 @@ const secondsView = document.getElementById("seconds");
 const minutesView = document.getElementById("minutes");
 const hoursView = document.getElementById("hours");
 
-let seconds = 1, minutes = 0, hours = 0;
+let seconds = 0, minutes = 0, hours = 0;
 const maxTime = 60
 
 const timer = () => {
@@ -13,15 +13,14 @@ const timer = () => {
             timer()
         } else {
             minutes += 1
-            seconds = 1;
+            seconds = 0;
             timer()
         } 
     }, 1000)
 
-    if(minutes > maxTime) {
+    if(minutes > 59) {
         hours += 1
-        minutes = 1
-        timer()
+        minutes = 0
     } 
 
     if(seconds <= 9) {
